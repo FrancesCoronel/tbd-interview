@@ -14,9 +14,9 @@ const Home = () => {
         <h1
           className="text-6xl font-bold text-center font-display text-primary"
           tabIndex={0}
-          aria-label="The Alamo Research App (ARA)"
+          aria-label="The Los Alamos Research App (LARA)"
         >
-          The Alamo Research App (ARA)
+          The Los Alamos Research App (LARA)
         </h1>
       </header>
       {/* Conditional rendering: Show loading spinner if data is not yet loaded, else show content */}

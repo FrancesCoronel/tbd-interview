@@ -1,6 +1,6 @@
-# The Alamos Research App
+# The Los Alamos Research App
 
-The Alamos Research App, aka The ARA, allows scientists collaborate and manage sensitive research related to the creation of the first atomic bomb.
+The Los Alamos Research App, aka The ARA, allows scientists collaborate and manage sensitive research related to the creation of the first atomic bomb.
 
 I was inspired after watching the movie Oppenheimer which was 3 hours of character development and 5 minutes of the actual bomb being dropped.
 
@@ -26,7 +26,7 @@ https://ara.vercel.app
 
 ## Overview
 
-The Alamo Research App leverages decentralized technologies to provide a secure and collaborative environment for scientists.
+The Los Alamos Research App leverages decentralized technologies to provide a secure and collaborative environment for scientists.
 
 By using DIDs, decentralized storage, encrypted communication, and specialized collaboration protocols, ARA ensures that sensitive research data is handled with the utmost confidentiality and integrity.
 
@@ -66,3 +66,4 @@ I plan to spend the next 2 hours building the UI and decentralized architecture.
 ## Resources
 
 - [TBD Quickstart](https://developer.tbd.website/docs/web5/quickstart)
+- [TBD ChatGPT Plugin](https://developer.tbd.website/blog/web5-chatgpt/)
