@@ -19,10 +19,17 @@ const DocumentList = (props: Props) => {
   const [editingDocument, setEditingDocument] =
     useState<ResearchDocument | null>(null);
 
+  const header = (
+    <h3 className="font-bold text-2xl text-center tracking-tight">
+      Document List
+    </h3>
+  );
+
   if (documents.length > 0) {
     return (
       <>
-        <div className="border-gray-200 border-t border-x mt-8 shadow-md sm:max-w-xl sm:mx-auto sm:w-full">
+        {header}
+        <div className="border-gray-200 border-t border-x mt-8 shadow-md sm:max-w-xl sm:mx-auto w-full">
           {documents.map((document) => (
             <div
               key={document.id}
@@ -69,6 +76,13 @@ const DocumentList = (props: Props) => {
             />
           )}
         </div>
+      </>
+    );
+  } else {
+    return (
+      <>
+        {header}
+        <p className="mt-8">No documents yet. Go ahead and create one!</p>
       </>
     );
   }

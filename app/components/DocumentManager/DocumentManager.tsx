@@ -4,6 +4,7 @@ import Records from "@/app/components/DocumentManager/Records";
 import LoadingSpinner from "@/app/components/LoadingSpinner";
 import { Web5 } from "@tbd54566975/web5";
 import { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export type ResearchDocument = {
   record: any;
@@ -52,7 +53,10 @@ const DocumentManager = () => {
         Promise.all(loadedDocuments).then((loadedDocs) => {
           setDocuments(loadedDocs);
         });
-      } else {
+      }
+
+      // Check for errors
+      if (queryResult.error) {
         setError(true);
       }
     })();
@@ -143,9 +147,6 @@ const DocumentManager = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
           {/* Add Document Form */}
           <div className="sm:col-span-1">
-            <h3 className="font-bold text-2xl text-center tracking-tight">
-              Add a new document
-            </h3>
             <AddDocumentForm
               addDocument={addDocument}
               newDocumentContent={newDocumentContent}
@@ -156,9 +157,6 @@ const DocumentManager = () => {
           </div>
           {/* Documents */}
           <div className="sm:col-span-1">
-            <h3 className="font-bold text-2xl text-center tracking-tight">
-              Document List
-            </h3>
             <DocumentList
               documents={documents}
               deleteDocument={deleteDocument}
@@ -169,7 +167,16 @@ const DocumentManager = () => {
           <Records documents={documents} />
         </div>
       )}
-      {error ? <p className="text-red-500">Error loading documents.</p> : null}
+      {error ? (
+        <div>
+          <FontAwesomeIcon
+            icon="exclamation-triangle"
+            size="2x"
+            className="text-primary"
+          />
+          <p className="text-primary">Error loading documents.</p>
+        </div>
+      ) : null}
     </div>
   );
 };

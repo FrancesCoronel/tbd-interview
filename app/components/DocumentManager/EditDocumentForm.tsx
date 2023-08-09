@@ -26,7 +26,7 @@ const EditDocumentForm = (props: EditDocumentFormProps) => {
           <h2 className="text-2xl font-bold">Edit Document</h2>
         </div>
 
-        <div className="border-b border-gray-200 sm:w-full">
+        <div className="border-b border-gray-200 w-full">
           <label htmlFor="edit-title">Title</label>
           <input
             name="edit-title"
@@ -37,7 +37,7 @@ const EditDocumentForm = (props: EditDocumentFormProps) => {
             placeholder="Title"
           />
         </div>
-        <div className="border-b border-gray-200 sm:w-full">
+        <div className="border-b border-gray-200 w-full">
           <label htmlFor="edit-content">Content</label>
           <textarea
             rows={4}
