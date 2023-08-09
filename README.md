@@ -1,12 +1,12 @@
 # The Los Alamos Research App
 
-The Los Alamos Research App, aka The ARA, allows scientists collaborate and manage sensitive research related to the creation of the first atomic bomb.
+The Los Alamos Research App, aka LARA, allows scientists collaborate and manage sensitive research related to the creation of the first atomic bomb.
 
 I was inspired after watching the movie Oppenheimer which was 3 hours of character development and 5 minutes of the actual bomb being dropped.
 
 I thought, "What if there was an app that could help the scientists collaborate and manage their research in a decentralized manner since identity verification was so important for them?".
 
-And thus, the ARA was born.
+And thus, LARA was born.
 
 ## Getting Started
 
@@ -22,21 +22,21 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Deployed URL
 
-https://ara.vercel.app
+https://lara-tbd.vercel.app
 
 ## Overview
 
 The Los Alamos Research App leverages decentralized technologies to provide a secure and collaborative environment for scientists.
 
-By using DIDs, decentralized storage, encrypted communication, and specialized collaboration protocols, ARA ensures that sensitive research data is handled with the utmost confidentiality and integrity.
+By using DIDs, decentralized storage, encrypted communication, and specialized collaboration protocols, LARA ensures that sensitive research data is handled with the utmost confidentiality and integrity.
 
 It's a comprehensive solution that addresses the unique challenges of managing highly sensitive and collaborative research projects.
 
-![ARA Overview](./docs/system-design.png)
+![System Design](./docs/system-design.png)
 
 ### User Interface (UI)
 
-- Access Point: Scientists access the ARA through a user interface that provides tools for collaboration, data management, and secure communication.
+- Access Point: Scientists access a user interface that provides tools for collaboration, data management, and secure communication.
 - Authentication: Users are authenticated through Decentralized Identifiers (DIDs), ensuring a secure and privacy-preserving login process.
 
 ### DID Management
