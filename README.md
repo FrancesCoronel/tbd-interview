@@ -58,9 +58,9 @@ It's a comprehensive solution that addresses the unique challenges of managing h
 
 ![Documents](https://i.imgur.com/kFGxrL1.png)
 
-## Logistics
+## Project approach
 
-I spent about 5-6 hours on this project.
+I spent about 5 hours on this project.
 
 I spent the first hour brainstorming and deciding on an idea and creating a basic scaffold.
 
@@ -73,6 +73,14 @@ Then I spent one more hour cleaning up the code and preparing the README to pres
 A caveat I will mention is that I not spend a lot of time implementing the DID authentication logic. I mocked it out with a simple boolean check.
 
 I also didn't spend any time writing tests using Cypress or Jest. I did note that Web5 doesn't seem to support types for TypeScript yet so this is part of the reason I didn't write tests.
+
+I am unable to deploy the app to a live URL (https://lara-tbd.vercel.app) because it seems Web5 doesn't support the latest version of Next.js. I was able to get it to run locally though.
+
+Here's the error for reference:
+
+```txt
+Error: No native build was found for platform=darwin arch=arm64 runtime=node abi=115 uv=1 armv=8 libc=glibc node=20.5.1 webpack=true
+```
 
 ## Resources
 
