@@ -40,8 +40,7 @@ const useDocuments = (isAuthenticated: boolean) => {
         message: {
           filter: {
             schema: "https://schema.org/DigitalDocument"
-          },
-          recipient: did // Include the DID as the recipient
+          }
         }
       });
 
@@ -61,13 +60,8 @@ const useDocuments = (isAuthenticated: boolean) => {
           setDocuments(loadedDocs);
         });
       }
-
-      // Check for errors
-      if (queryResult.error) {
-        setError(new Error("Error loading documents"));
-      }
     })();
-  }, []); // Empty dependency array to run once
+  }, [isAuthenticated]); // Empty dependency array to run once
 
   /**
    * Add a document
