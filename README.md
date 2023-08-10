@@ -72,7 +72,7 @@ Then I spent one more hour cleaning up the code and preparing the README to pres
 
 A caveat I will mention is that I not spend a lot of time implementing the DID authentication logic. I mocked it out with a simple boolean check.
 
-I also didn't spend any time writing tests using Cypress or Jest. I did note that Web5 doesn't seem to support types for TypeScript yet so this is part of the reason I didn't write tests.
+I also didn't spend time writing tests using Cypress or Jest even though I recognize how important test-driven development is. Web5 doesn't seem to support types for TypeScript yet so this is part of the reason I didn't write tests but also because I was short on time. Here are [examples of tests](https://github.com/TBD54566975/developer.tbd.website/blob/main/site/__tests__/quickstart.test.js) I would have used for inspiration.
 
 I am unable to deploy the app to a live URL (https://lara-tbd.vercel.app) because it seems Web5 doesn't support the latest version of Next.js. I was able to get it to run locally though.
 
