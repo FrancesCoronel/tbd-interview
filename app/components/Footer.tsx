@@ -4,7 +4,7 @@
 const Footer = () => {
   return (
     <footer
-      className="flex flex-col items-center justify-center font-display"
+      className="flex flex-col items-center justify-center font-display mt-8"
       aria-labelledby="footer-heading"
     >
       <h2 id="footer-heading" className="sr-only">

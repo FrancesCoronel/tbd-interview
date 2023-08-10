@@ -8,6 +8,11 @@ const Header = () => {
       >
         The Los Alamos Research App (LARA)
       </h1>
+      <p className="text-xl text-center text-gray-500 mt-8">
+        The Los Alamos Research App (LARA) allows scientists collaborate and
+        manage sensitive research related to the creation of the first atomic
+        bomb.
+      </p>
     </header>
   );
 };

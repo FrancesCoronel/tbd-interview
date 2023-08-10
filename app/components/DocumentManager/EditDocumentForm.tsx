@@ -1,4 +1,4 @@
-import { ResearchDocument } from "@/app/components/DocumentManager/DocumentManager";
+import { ResearchDocument } from "@/app/hooks/useDocuments";
 import { faCheck } from "@fortawesome/free-solid-svg-icons"; // Use an appropriate icon for saving changes
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
@@ -33,7 +33,7 @@ const EditDocumentForm = (props: EditDocumentFormProps) => {
             id="edit-title"
             value={editedTitle}
             onChange={(e) => setEditedTitle(e.target.value)}
-            className="block border-0 border-transparent focus:ring-0 p-2 resize-none sm:text-sm text-black mt-2"
+            className="block border-0 border-transparent focus:ring-0 p-2 resize-none sm:text-sm text-black mt-2 w-full"
             placeholder="Title"
           />
         </div>
@@ -45,14 +45,14 @@ const EditDocumentForm = (props: EditDocumentFormProps) => {
             id="edit-content"
             value={editedContent}
             onChange={(e) => setEditedContent(e.target.value)}
-            className="block border-0 border-transparent focus:ring-0 p-2 resize-none sm:text-sm text-black mt-2"
+            className="block border-0 border-transparent focus:ring-0 p-2 resize-none sm:text-sm text-black mt-2 w-full"
             placeholder="Content"
           />
         </div>
         <button
           type="button"
           onClick={() => onSave(editedTitle, editedContent)} // Handle the edit/save action here
-          className="bg-primary border border-transparent focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 hover:bg-secondary inline-flex items-center p-2 shadow-sm text-black"
+          className="bg-secondary border border-transparent focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 hover:bg-primary inline-flex items-center p-2 shadow-sm text-black"
         >
           <FontAwesomeIcon
             icon={faCheck}

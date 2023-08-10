@@ -1,5 +1,5 @@
-import { ResearchDocument } from "@/app/components/DocumentManager/DocumentManager";
 import EditDocumentForm from "@/app/components/DocumentManager/EditDocumentForm";
+import { ResearchDocument } from "@/app/hooks/useDocuments";
 import { faPencilAlt, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";

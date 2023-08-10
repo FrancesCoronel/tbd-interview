@@ -1,4 +1,4 @@
-import { ResearchDocument } from "@/app/components/DocumentManager/DocumentManager";
+import { ResearchDocument } from "@/app/hooks/useDocuments";
 import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { a11yDark } from "react-syntax-highlighter/dist/esm/styles/prism";
@@ -13,7 +13,7 @@ const Records = (props: Props) => {
     return (
       <div className="col-span-2 mt-16">
         <h2 className="font-bold text-3xl text-center tracking-tight">
-          View the records
+          View the records ({documents.length})
         </h2>
         <div className="mt-8">
           <SyntaxHighlighter
