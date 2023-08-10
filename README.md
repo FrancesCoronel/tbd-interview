@@ -20,10 +20,6 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Deployed URL
-
-https://lara-tbd.vercel.app
-
 ## Overview
 
 The Los Alamos Research App leverages decentralized technologies to provide a secure and collaborative environment for scientists.
@@ -32,7 +28,7 @@ By using DIDs, decentralized storage, encrypted communication, and specialized c
 
 It's a comprehensive solution that addresses the unique challenges of managing highly sensitive and collaborative research projects.
 
-![System Design](./docs/system-design.png)
+![System Design](https://i.imgur.com/D8L5z7d.png)
 
 ### User Interface (UI)
 
@@ -42,26 +38,41 @@ It's a comprehensive solution that addresses the unique challenges of managing h
 ### DID Management
 
 - DID Creation: New users create a DID, which serves as a decentralized identity within the system.
-- DID Verification: Existing users' DIDs are verified to ensure that only authorized individuals can access the system.
+- DID Verification: Existing users' DIDs are verified to ensure that only authorized individuals can access the system. (TO NOTE: The auth logic is just mocked up right now)
 
 ### Decentralized Web Node (DWN)
 
 - Data Storage: All data, including research documents and collaboration details, are stored in decentralized web nodes (DWNs).
-- (NOT SURE YET) Data Encryption: Data is encrypted and securely stored to ensure that only authorized individuals can access it.
-- (NOT SURE YET) Syncing: Data is synced across different DWNs to ensure availability and redundancy.
+
+## Screenshots
+
+### Login
+
+![Login](https://i.imgur.com/ONMiA34.png)
+
+### Initial state after login
+
+![Initial State](https://i.imgur.com/3SqQAaI.png)
+
+### Managing documents
+
+![Documents](https://i.imgur.com/kFGxrL1.png)
 
 ## Logistics
 
-I started working on this at 9 am on Wednesday, August 9th.
+I spent about 5-6 hours on this project.
 
-I spent the first hour:
+I spent the first hour brainstorming and deciding on an idea and creating a basic scaffold.
 
-- brainstorming and deciding on an idea
-- creating the basic system design diagram using Whimsical
-- creating a basic landing page using some design inspiration from TBD's website
-- committing this initial scaffold and deploying it to Vercel
+I plan to spend the next 2 hours building the UI and decentralized architecture
 
-I plan to spend the next 2 hours building the UI and decentralized architecture.
+Then I spent one more hour cleaning up the code and preparing the README to present.
+
+### To Note
+
+A caveat I will mention is that I not spend a lot of time implementing the DID authentication logic. I mocked it out with a simple boolean check.
+
+I also didn't spend any time writing tests using Cypress or Jest. I did note that Web5 doesn't seem to support types for TypeScript yet so this is part of the reason I didn't write tests.
 
 ## Resources
 
