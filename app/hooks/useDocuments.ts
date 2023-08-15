@@ -11,7 +11,10 @@ export type ResearchDocument = {
 };
 
 const useDocuments = (isAuthenticated: boolean) => {
+  // An instance of the Web5 library
   const [web5, setWeb5] = useState<any>(null);
+
+  // The decentralized identifier (DID) of the user
   const [myDid, setMyDid] = useState<string>("");
 
   const [documents, setDocuments] = useState<ResearchDocument[]>([]);
@@ -22,12 +25,12 @@ const useDocuments = (isAuthenticated: boolean) => {
   useEffect(() => {
     // Async IIFE for this useEffect
     (async () => {
-      // Connect to Web5
+      // Connect to Web5: Establishes a connection to the Web5 platform and sets the web5 and myDid states.
       const { web5: web5Instance, did } = await Web5.connect();
       setWeb5(web5Instance);
       setMyDid(did);
 
-      // Authenticate the user using the DID
+      // User Authentication: Checks if the user is authenticated using the DID. If not, it sets an error.
       if (!isAuthenticated) {
         setError(new Error("User is not authenticated"));
         return; // Exit if authentication fails
@@ -35,7 +38,7 @@ const useDocuments = (isAuthenticated: boolean) => {
         setError(null);
       }
 
-      // Populate documents from DWN
+      // Populate Documents: If the user is authenticated, it queries the decentralized web node (DWN) for records matching a specific schema and populates the documents state.
       const queryResult = await web5Instance.dwn.records.query({
         message: {
           filter: {

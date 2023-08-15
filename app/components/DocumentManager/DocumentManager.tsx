@@ -1,22 +1,19 @@
 import AddDocumentForm from "@/app/components/DocumentManager/AddDocumentForm";
 import DocumentList from "@/app/components/DocumentManager/DocumentList";
 import Records from "@/app/components/DocumentManager/Records";
-import ErrorMessage from "@/app/components/ErrorMessage";
 import LoadingSpinner from "@/app/components/LoadingSpinner";
 import Login from "@/app/components/Login";
 import { useDocuments } from "@/app/hooks/useDocuments";
 import { useState } from "react";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { a11yDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const DocumentManager = () => {
   // Mock authentication
   const [authenticated, setAuthenticated] = useState(false);
 
-  // Load documents, state and DID
+  // Load a custom React hook, useDocuments, that facilitates interactions with research documents on the Web5 platform. It allows users to connect to the platform, authenticate, and perform CRUD (Create, Read, Update, Delete) operations on research documents stored in the decentralized web node (DWN).
   const { documents, state, myDid } = useDocuments(authenticated);
 
-  // Show login if not authenticated
+  // Show login component if not authenticated
   if (authenticated === false) {
     return (
       <div className="flex flex-col items-center justify-center mt-8 mb-8">
