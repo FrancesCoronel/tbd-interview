@@ -1,6 +1,12 @@
-# The Los Alamos Research App
+# LARA — Los Alamos Research App
 
-The Los Alamos Research App, aka LARA, allows scientists collaborate and manage sensitive research related to the creation of the first atomic bomb.
+Take-home technical exercise for a Senior Software Engineer role.
+
+A decentralized collaboration platform inspired by the Manhattan Project. Scientists authenticate via Decentralized Identifiers (DIDs) and manage sensitive research documents stored in Decentralized Web Nodes (DWNs) using the Web5 protocol.
+
+**Company:** [TBD](https://tbd.website)
+
+---
 
 I was inspired after watching the movie Oppenheimer which was 3 hours of character development and 5 minutes of the actual bomb being dropped.
 
